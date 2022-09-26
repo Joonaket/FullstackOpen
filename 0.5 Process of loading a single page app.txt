@@ -1,0 +1,15 @@
+Selain->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+
+palvelin->selain: HTML-data
+
+Selain->Palvelin: HTTP GET .../main.css
+palvelin->selain: main.css
+
+selain->palvelin: HTTP GET .../spa.js
+palvelin->selain: spa.js
+
+//selain ajaa spa.js skriptin ja pyytää dataa
+selain->palvelin: HTTP GET .../data.json
+palvelin->selain: data.json
+
+//Selain piirtää datan perusteella listan notes

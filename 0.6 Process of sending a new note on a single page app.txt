@@ -1,0 +1,10 @@
+...sivu on ladattu kuten kuvattu tehtävässä 0.5
+
+Selain->Palvelin: HTTP POST .../new_note_spa 
+Lähettää tiedon json-merkkijonona
+
+
+/Selain ajaa myös koodin joka puskee uusimman'
+muistion listaan ja piirtää listan uudelleen
+
+Palvelin->Selain: 201 created

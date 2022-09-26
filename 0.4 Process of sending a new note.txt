@@ -1,0 +1,32 @@
+1. Selain luo HTTP POST-pyynnön palvelimelle napin painalluksen takia
+
+2. *Palvelin ajaa käsittelykoodin* 
+	
+3. ->Palvelin ohjaa uudelleen koodilla 302
+
+4. ->Selain tekee uuden HTTP GET-pyynnön osoitteeseen /notes 
+(lataa siis sivun uudelleen)
+
+
+selain->palvelin: HTTP POST /exampleapp/new_note
+
+//palvelin:etsii datan kohdasta req.body.note, lisää listaan notes
+
+palvelin->selain: 302 osoitteeseen /notes
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+palvelin->selain: HTML-koodi
+
+selain->palvelin: HTTP GET .../main.css
+palvelin->selain main.css
+
+selain->palvelin: HTTP GET .../main.js
+palvelin->selain: main.js
+
+//selain:suorittaa main.js koodin ja pyytää dataa palvelimelta
+
+
+selain->palvelin: HTTP GET .../data.json
+palvelin-->selain: *lähettää datan json-muodossa
+
+//selain renderöi datan listaksi käyttäjälle
